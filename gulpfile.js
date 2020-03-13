@@ -33,6 +33,7 @@ const gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync').create(),
   pug = require('gulp-pug'),
+  gulpStylelint = require('gulp-stylelint'),
   src_folder = './src/',
   src_assets_folder = src_folder + 'assets/',
   dist_folder = './dist/',
@@ -42,6 +43,14 @@ const gulp = require('gulp'),
   node_dependencies = Object.keys(require('./package.json').dependencies || {});
 
 gulp.task('clear', () => del([dist_folder]));
+
+gulp.task('lint-css', function lintCssTask() {
+  return gulp.src('src/**/*.scss').pipe(
+    gulpStylelint({
+      reporters: [{ formatter: 'string', console: true }],
+    }),
+  );
+});
 
 gulp.task('html', () => {
   return gulp
