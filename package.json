@@ -21,9 +21,7 @@
   ],
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
-    "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}' "
+    "build": "gulp build"
   },
   "bin": {
     "create-gulp-starter-kit": "./bin/install.js"
