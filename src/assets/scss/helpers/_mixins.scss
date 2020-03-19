@@ -1,0 +1,9 @@
+@mixin font-main {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

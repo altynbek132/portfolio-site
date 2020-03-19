@@ -3,3 +3,21 @@
 *::after {
   box-sizing: border-box;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-outer {
+  padding: 0 20px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  @include font-main;
+}
