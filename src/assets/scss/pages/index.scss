@@ -1,6 +1,67 @@
 @import '../_includes';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200i,300,400,400i,700&display=swap');
 
+.intro {
+  margin-top: 15px;
+  border-bottom: 1px #f1f1f1 solid;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  // mix
+  &__btn {
+    & + & {
+      margin-left: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15px;
+  }
+
+  &__hi {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: $color-black;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 45px;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &__prof {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $color-gray;
+  }
+
+  &__photo {
+    align-self: flex-end;
+    background: url('../../images/symbols.png') center no-repeat;
+    background-size: contain;
+  }
+
+  // mix
+  &__social {
+    margin-bottom: 40px;
+  }
+}
+
 .avatar {
   display: flex;
 
