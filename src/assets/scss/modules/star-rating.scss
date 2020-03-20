@@ -1,0 +1,27 @@
+@import '../helpers/helpers';
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+
+  &__item {
+    position: relative;
+
+    & + & {
+      margin-left: 4px;
+    }
+
+    &--half {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 15px;
+        content: '';
+        background-color: $color-white;
+      }
+    }
+  }
+}

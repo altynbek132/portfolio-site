@@ -1,0 +1,12 @@
+@import '../helpers/helpers';
+
+.reviews {
+  &__item {
+    margin-bottom: 160px;
+    background: $review-color url('../../images/reviews-bg.png') center no-repeat;
+
+    &:last-child {
+      margin-bottom: 210px;
+    }
+  }
+}

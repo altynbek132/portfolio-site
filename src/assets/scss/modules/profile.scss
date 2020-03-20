@@ -1,0 +1,32 @@
+@import '../helpers/helpers';
+
+.profile {
+  text-align: center;
+
+  &__name {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-black;
+  }
+
+  &__organization {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: $color-profile-org;
+  }
+
+  &__photo-wrapper {
+    margin-bottom: 5px;
+  }
+
+  &__photo {
+    border: solid $color-profile-border 4px;
+    border-radius: 50%;
+  }
+
+  &__rating {
+    color: $review-color;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../helpers/helpers';
+
+.review {
+  position: relative;
+  text-align: center;
+
+  &__text {
+    width: 70%;
+    padding: 70px 0 70px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 2.286;
+    color: $color-white;
+  }
+
+  &__profile {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -47.5px);
+  }
+}
