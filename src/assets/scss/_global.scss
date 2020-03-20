@@ -23,3 +23,7 @@ a {
 body {
   @include font-main;
 }
+
+img {
+  height: auto;
+}
