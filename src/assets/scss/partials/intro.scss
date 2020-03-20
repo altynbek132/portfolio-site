@@ -19,6 +19,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     justify-content: center;
     padding-right: 15px;
   }
@@ -42,8 +43,12 @@
     color: $color-gray;
   }
 
-  &__photo {
+  &__photo-wrapper {
     align-self: flex-end;
+  }
+
+  &__photo {
+    width: 100%;
     background: url('../../images/symbols.png') center no-repeat;
     background-size: contain;
   }
