@@ -1,0 +1,54 @@
+@import '../helpers/helpers';
+
+.about {
+  margin: 130px 0 142px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__photo-wrapper {
+    flex-basis: 45%;
+    flex-shrink: 1;
+    align-self: flex-end;
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  &__title {
+    margin: 0 0 25px 0;
+    font-size: 45px;
+    font-weight: bold;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+
+  &__subititle {
+    margin: 0 0 48px 0;
+    font-size: 92px;
+    font-weight: bold;
+    color: #dedede;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 90%;
+    margin: 0 0 58px 0;
+    font-size: 12px;
+    line-height: 2;
+    color: rgb(113, 112, 114);
+  }
+}
