@@ -22,6 +22,8 @@ const gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
   sass = require('gulp-sass'),
+  postcss = require('gulp-postcss'),
+  pxtorem = require('postcss-pxtorem'),
   less = require('gulp-less'),
   stylus = require('gulp-stylus'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -67,6 +69,30 @@ gulp.task('pug', () => {
 });
 
 gulp.task('sass', () => {
+  var propList = [
+    'font',
+    'font-size',
+    'line-height',
+    'letter-spacing',
+    'margin',
+    'margin-top',
+    'margin-right',
+    'margin-bottom',
+    'margin-left',
+    'padding',
+    'padding-top',
+    'padding-right',
+    'padding-bottom',
+    'padding-left',
+  ];
+
+  var processors = [
+    pxtorem({
+      // replace: false,
+      propList,
+    }),
+  ];
+
   return gulp
     .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
       since: gulp.lastRun('sass'),
@@ -76,6 +102,7 @@ gulp.task('sass', () => {
     .pipe(dependents())
     .pipe(sass())
     .pipe(autoprefixer())
+    .pipe(postcss(processors))
     .pipe(minifyCss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'css'))
