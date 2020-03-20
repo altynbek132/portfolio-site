@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200i,300,400,400i,700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
