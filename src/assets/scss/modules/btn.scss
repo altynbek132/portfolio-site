@@ -10,9 +10,14 @@
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  background-color: transparent;
   border: 1px solid $color-black;
   border-radius: 32px;
   transition: 0.2s;
+
+  &:focus {
+    outline: none;
+  }
 
   & + & {
     margin-left: 15px;
@@ -21,9 +26,6 @@
   &:hover {
     color: $color-white;
     background-color: $color-black;
-  }
-
-  &--button {
-    background-color: $color-white;
+    box-shadow: 0 0 5px 2px #cfcfcf;
   }
 }
