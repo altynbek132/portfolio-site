@@ -1,9 +1,223 @@
 extends templates/_default
 
 block content
-  h1.title Gulp Starter Kit
-
-  p.description
-    strong A simple Gulp 4 Starter Kit for modern web development.
-
-  img.image(src="/assets/images/sample.jpg" alt="")
+  section.section-outer.intro
+    .container
+      header.intro__header.header
+        .header__avatar.avatar
+          img.avatar__photo(src='https://via.placeholder.com/100')
+          .avatar__content
+            .avatar__name
+              | HTML 
+              br
+              | Nathaniel
+            .avatar__prof UI &amp; UX Designer
+        .header__nav.nav
+          a.nav__item.active(href='#work') work
+          a.nav__item(href='#about') about me
+          a.nav__item(href='#blog') blog
+          a.nav__item(href='#contact') contact
+          a.nav__item.nav__item--border(href='#hire') hire me
+      .intro__body
+        .intro__content
+          .intro__hi Hello, I&rsquo;m
+          .intro__name Lewis Nathaniel
+          .intro__prof UI &amp; UX Designer
+          .intro__social.social
+            a.social__link.social__link--1(href='#' target='_blank')
+              i.fab.fa-behance-square
+            a.social__link.social__link--2(href='#' target='_blank')
+              i.fas.fa-basketball-ball
+            a.social__link.social__link--3(href='#' target='_blank')
+              i.fab.fa-linkedin-in
+            a.social__link.social__link--4(href='#' target='_blank')
+              i.fab.fa-facebook-f
+            a.social__link.social__link--5(href='#' target='_blank')
+              i.fab.fa-instagram
+            a.social__link.social__link--6(href='#' target='_blank')
+              i.fab.fa-twitter
+          .intro__buttons
+            a.btn(href='#') hire me
+            a.btn(href='#') see my resume
+        .intro__photo-wrapper
+          img.intro__photo(src='./assets/images/photo.png')
+  section#work.section-outer.projects
+    .container
+      .projects__nav.nav-projects
+        a.nav-projects__item(href='#') All
+        a.nav-projects__item(href='#') App
+        a.nav-projects__item(href='#') Website
+        a.nav-projects__item(href='#') Interaction
+      .projects__works.works
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/555x450')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+        .works__item-wrapper
+          .works__item
+            img.works__photo(src='https://via.placeholder.com/370x300')
+            .works__content
+              .works__category category
+              .works__title
+                .works__name project title
+                .works__date 2019
+      .projects__btn-wrapper
+        button.projects__btn.btn.btn--button(type='button') load more work
+  section#about.section-outer.about
+    .container.about__wrapper
+      .about__photo-wrapper
+        img.about__photo(src='./assets/images/designer_photo.png')
+      .about__content
+        .about__title about me
+        .about__subititle who am i
+        .about__text
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+          | eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+          | iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+          | tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum,
+          | auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+          | cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet
+          | aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in
+          | nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus.
+          | Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa,
+          | sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa
+          | mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non
+          | imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
+        .about__buttons
+          a.btn(href='#') hire me
+          a.btn(href='#') see my resume
+  section.section-outer.reviews
+    .container
+      .reviews__item.review
+        .review__text
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+          | eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+          | iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+          | tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+        .review__profile.profile
+          .profile__photo-wrapper
+            img.profile__photo(src='https://via.placeholder.com/180')
+          .profile__name Edward M. Brooks
+          .profile__organization Marketing House
+          .profile__rating.star-rating
+            .star-rating__item
+              i.fas.fa-star
+            .star-rating__item
+              i.fas.fa-star
+            .star-rating__item
+              i.fas.fa-star
+            .star-rating__item
+              i.fas.fa-star
+            .star-rating__item.star-rating__item--half
+              i.fas.fa-star
+  section#blog.section-outer.articles
+    .container
+      .articles__title read me
+      .articles__subtitle Sometimes i write something smart
+      .articles__cards
+        .articles__item.card-article
+          .card-article__date
+            | 15
+            br
+            | june
+          a.card-article__photo-wrapper(href='#' target='_blank')
+            img.card-article__photo(src='https://via.placeholder.com/370x260' alt='')
+          .card-article__title website inspiration
+          .card-article__subtitle category
+          .card-article__text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+            | eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+            | iaculis eros sem, elementum consequat.
+          a.card-article__btn.btn(href='#' target='_blank') read more
+        .articles__item.card-article
+          .card-article__date
+            | 15
+            br
+            | june
+          a.card-article__photo-wrapper(href='#' target='_blank')
+            img.card-article__photo(src='https://via.placeholder.com/555x390' alt='')
+          .card-article__title website inspiration
+          .card-article__subtitle category
+          .card-article__text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+            | eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+            | iaculis eros sem, elementum consequat. Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis
+            | et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+          a.card-article__btn.btn(href='#' target='_blank') read more
+        .articles__item.card-article
+          .card-article__date
+            | 15
+            br
+            | june
+          a.card-article__photo-wrapper(href='#' target='_blank')
+            img.card-article__photo(src='https://via.placeholder.com/370x260' alt='')
+          .card-article__title website inspiration
+          .card-article__subtitle category
+          .card-article__text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+            | eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+            | iaculis eros sem, elementum consequat.
+          a.card-article__btn.btn(href='#' target='_blank') read more
+      .articles__link-wrapper
+        a.articles__link(href='#' target='_blank') See more posts
