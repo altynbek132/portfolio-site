@@ -4,27 +4,26 @@
   text-align: center;
 
   &__name {
-    margin-bottom: 0.3125rem;
-    font-size: 1rem;
+    margin-bottom: 5px;
+    font-size: 16px;
     font-weight: bold;
     color: $color-black;
   }
 
   &__organization {
-    margin-bottom: 0.3125rem;
-    font-size: 0.875rem;
+    margin-bottom: 5px;
+    font-size: 14px;
     font-style: italic;
     color: $color-profile-org;
   }
 
   &__photo-wrapper {
-    margin-bottom: 0.3125rem;
+    margin-bottom: 5px;
   }
 
   &__photo {
-    width: 5.625rem;
+    width: 90px;
     height: auto;
-    margin: 0 auto;
     border: solid $color-profile-border 4px;
     border-radius: 50%;
   }
