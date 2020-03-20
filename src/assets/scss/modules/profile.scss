@@ -22,6 +22,8 @@
   }
 
   &__photo {
+    width: 90px;
+    height: auto;
     border: solid $color-profile-border 4px;
     border-radius: 50%;
   }
