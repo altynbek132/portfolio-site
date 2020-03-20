@@ -28,4 +28,18 @@
     flex: 1 1 33.333%;
     padding: 0 15px 30px;
   }
+
+  &__link-wrapper {
+    text-align: right;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    color: $color-profile-org;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
