@@ -11,8 +11,8 @@
 
     position: absolute;
     z-index: 100;
-    padding: 15px;
-    font-size: 16px;
+    padding: 0.9375rem;
+    font-size: 1rem;
     font-weight: bold;
     color: $color-white;
     text-align: center;
@@ -20,7 +20,7 @@
   }
 
   &__photo-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
     overflow: hidden;
   }
 
@@ -35,24 +35,24 @@
   }
 
   &__title {
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 0.9375rem;
+    font-size: 1.125rem;
     font-weight: bold;
     color: $color-black;
     text-transform: uppercase;
   }
 
   &__subtitle {
-    margin-bottom: 30px;
-    font-size: 12px;
+    margin-bottom: 1.875rem;
+    font-size: 0.75rem;
     color: $color-black;
     text-transform: uppercase;
   }
 
   &__text {
     flex: 1 1 auto;
-    margin-bottom: 40px;
-    font-size: 12px;
+    margin-bottom: 2.5rem;
+    font-size: 0.75rem;
     line-height: 2;
     color: $color-profile-org;
   }
