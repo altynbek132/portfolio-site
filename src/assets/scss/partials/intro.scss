@@ -1,0 +1,131 @@
+@import '../helpers/helpers';
+
+.intro {
+  margin-top: 15px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-bottom: 1px #f1f1f1 solid;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15px;
+  }
+
+  &__hi {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: $color-black;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 45px;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &__prof {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $color-gray;
+  }
+
+  &__photo {
+    align-self: flex-end;
+    background: url('../../images/symbols.png') center no-repeat;
+    background-size: contain;
+  }
+
+  // mix
+  &__social {
+    margin-bottom: 40px;
+  }
+}
+
+.avatar {
+  display: flex;
+
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-black;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 9px;
+  }
+
+  &__photo {
+    border-radius: 50%;
+  }
+
+  &__prof {
+    font-size: 12px;
+    color: $color-gray;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-black;
+    text-transform: uppercase;
+
+    &--border {
+      padding: 8px 30px;
+      border: 2px solid $color-black;
+      border-radius: 20px;
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-black;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      content: '';
+      background-color: $color-black;
+      transition: 0.2s;
+    }
+
+    &:hover:not(.nav__item--border)::after {
+      width: 100%;
+    }
+
+    & + & {
+      margin-left: 40px;
+    }
+  }
+}

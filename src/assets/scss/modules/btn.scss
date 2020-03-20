@@ -1,0 +1,27 @@
+@import '../helpers/helpers';
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  padding: 12px 21px;
+  font-size: 16px;
+  color: $color-gray;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $color-black;
+  border-radius: 32px;
+  transition: 0.2s;
+
+  & + & {
+    margin-left: 15px;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
+
+  &--button {
+    background-color: $color-white;
+  }
+}
