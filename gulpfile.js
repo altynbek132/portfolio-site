@@ -36,6 +36,7 @@ const gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   pug = require('gulp-pug'),
   dependents = require('gulp-dependents'),
+  svgSprite = require('gulp-svg-sprite'),
   src_folder = './src/',
   src_assets_folder = src_folder + 'assets/',
   dist_folder = './dist/',
@@ -43,6 +44,23 @@ const gulp = require('gulp'),
   node_modules_folder = './node_modules/',
   dist_node_modules_folder = dist_folder + 'node_modules/',
   node_dependencies = Object.keys(require('./package.json').dependencies || {});
+
+gulp.task('svg', function() {
+  return gulp
+    .src([src_assets_folder + 'images/**/*.svg'])
+    .pipe(plumber())
+    .pipe(imagemin([imagemin.svgo()]))
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg',
+          },
+        },
+      }),
+    )
+    .pipe(gulp.dest(dist_assets_folder + 'images'));
+});
 
 gulp.task('clear', () => del([dist_folder]));
 
@@ -159,11 +177,11 @@ gulp.task('js', () => {
 
 gulp.task('images', () => {
   return gulp
-    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)'], {
+    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
       since: gulp.lastRun('images'),
     })
     .pipe(plumber())
-    .pipe(imagemin())
+    .pipe(imagemin([imagemin.mozjpeg(), imagemin.optipng()]))
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
 });
@@ -193,7 +211,7 @@ gulp.task(
   gulp.series('clear', 'html', 'pug', 'sass', 'less', 'stylus', 'js', 'images', 'vendor'),
 );
 
-gulp.task('dev', gulp.series('html', 'pug', 'sass', 'less', 'stylus', 'js'));
+gulp.task('dev', gulp.series('html', /*  'pug', */ 'sass', 'less', 'stylus', 'js'));
 
 gulp.task('serve', () => {
   return browserSync.init({
