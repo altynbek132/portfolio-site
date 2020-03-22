@@ -37,6 +37,9 @@ const gulp = require('gulp'),
   pug = require('gulp-pug'),
   dependents = require('gulp-dependents'),
   svgSprite = require('gulp-svg-sprite'),
+  svgmin = require('gulp-svgmin'),
+  cheerio = require('gulp-cheerio'),
+  replace = require('gulp-replace'),
   src_folder = './src/',
   src_assets_folder = src_folder + 'assets/',
   dist_folder = './dist/',
@@ -51,6 +54,17 @@ gulp.task('svg', function() {
     .pipe(plumber())
     .pipe(imagemin([imagemin.svgo()]))
     .pipe(
+      cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: { xmlMode: true },
+      }),
+    )
+    .pipe(replace('&gt;', '>'))
+    .pipe(
       svgSprite({
         mode: {
           stack: {
@@ -59,7 +73,8 @@ gulp.task('svg', function() {
         },
       }),
     )
-    .pipe(gulp.dest(dist_assets_folder + 'images'));
+    .pipe(gulp.dest(dist_assets_folder + 'images'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('clear', () => del([dist_folder]));
@@ -208,10 +223,10 @@ gulp.task('vendor', () => {
 
 gulp.task(
   'build',
-  gulp.series('clear', 'html', 'pug', 'sass', 'less', 'stylus', 'js', 'images', 'vendor'),
+  gulp.series('clear', 'html', 'svg', 'sass', 'less', 'stylus', 'js', 'images', 'vendor'),
 );
 
-gulp.task('dev', gulp.series('html', /*  'pug', */ 'sass', 'less', 'stylus', 'js'));
+gulp.task('dev', gulp.series('html', 'sass', 'less', 'stylus', 'js'));
 
 gulp.task('serve', () => {
   return browserSync.init({
