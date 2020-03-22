@@ -5,6 +5,11 @@
   justify-content: center;
   font-size: 15px;
 
+  &__icon {
+    width: 12px;
+    height: 12px;
+  }
+
   &__item {
     position: relative;
 
@@ -17,8 +22,8 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 8px;
-        height: 20px;
+        bottom: 0;
+        width: 6px;
         content: '';
         background-color: $color-white;
       }

@@ -23,12 +23,20 @@
     font-size: 14px;
     border-right: 1px solid #413f41;
   }
+}
 
-  // &__nav {
-  // }
+.social__icon--footer {
+  height: 20px;
+  fill: #8d8d8e;
 
-  // &__social {
-  // }
+  &-behance {
+    height: 24px;
+    transform: translateY(1px);
+  }
+}
+
+.social__link--footer:hover .social__icon--footer {
+  fill: $color-white;
 }
 
 .social__link--footer {

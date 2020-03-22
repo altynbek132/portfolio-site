@@ -3,6 +3,16 @@
 .social {
   display: flex;
 
+  &__icon {
+    height: 22px;
+    fill: white;
+
+    &--behance {
+      height: 27px;
+      transform: translateY(1px);
+    }
+  }
+
   &__link {
     @include flex-center;
 
