@@ -403,7 +403,7 @@
       </div>
     </section>
 
-    <section class="section-outer modal modal-project disabled">
+    <section class="section-outer modal modal-project" style="display: none;">
       <div class="modal__inner modal-project__inner">
         <button class="modal__btn-close">
           <svg class="modal__btn-close-icon">
@@ -454,7 +454,7 @@
       </div>
     </section>
 
-    <section class="section-outer modal modal-resume">
+    <section class="section-outer modal modal-resume" style="display: none;">
       <div class="modal__inner modal-resume__inner">
         <button class="modal__btn-close">
           <svg class="modal__btn-close-icon">
@@ -514,7 +514,7 @@
             </div>
           </div>
 
-          <div class="modal-resume__col-line modal-resume__col--right"></div>
+          <div class="modal-resume__col-line"></div>
 
           <div class="modal-resume__col">
             <div class="modal-resume__col-title">education</div>
@@ -582,6 +582,65 @@
         </div>
         <div class="text-center">
           <a href="#" class="btn">hire me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-outer modal modal-contact">
+      <div class="modal__inner modal-contact__inner">
+        <button class="modal__btn-close">
+          <svg class="modal__btn-close-icon">
+            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+          </svg>
+        </button>
+        <div class="modal-contact__content">
+          <div class="modal-contact__title">let's talk!</div>
+          <div class="modal-contact__subtitle">call me or send me a request</div>
+          <a class="modal__btn-contact" href="tel:1488-228-54-27">
+            <svg class="modal__btn-contact-icon">
+              <use xlink:href="./assets/images/sprite.svg#icons--phone"></use>
+            </svg>
+            <span class="modal__btn-contact-address">
+              1488-228-54-27
+            </span>
+          </a>
+          <a class="modal__btn-contact" href="mailto:maslo.maslo@maslo.maslo">
+            <svg class="modal__btn-contact-icon">
+              <use xlink:href="./assets/images/sprite.svg#icons--mail"></use>
+            </svg>
+            <span class="modal__btn-contact-address">
+              maslo.maslo@maslo.maslo
+            </span>
+          </a>
+
+          <form class="modal-contact__form" action="/" method="POST">
+            <div class="modal-contact__form-block">
+              <label for="input-email" class="modal-contact__form-title">Address e-mail</label>
+              <input
+                id="input-email"
+                class="modal-contact__input"
+                name="email"
+                type="email"
+                placeholder="Address Email"
+              />
+            </div>
+
+            <div class="modal-contact__form-block">
+              <label for="input-req" class="modal-contact__form-title">Request</label>
+              <textarea
+                id="input-req"
+                class="modal-contact__input modal-contact__input--big"
+                name="text"
+                type="text"
+                placeholder="Type your request..."
+              ></textarea>
+            </div>
+            <button class="btn modal-contact__btn" type="submit">send</button>
+          </form>
+        </div>
+
+        <div class="modal-contact__photo-wrapper">
+          <img src="https://via.placeholder.com/1000x800" alt="" class="modal-contact__photo" />
         </div>
       </div>
     </section>

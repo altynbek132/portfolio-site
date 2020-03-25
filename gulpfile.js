@@ -126,20 +126,22 @@ gulp.task('sass', () => {
     }),
   ];
 
-  return gulp
-    .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
-      since: gulp.lastRun('sass'),
-    })
-    .pipe(sourcemaps.init())
-    .pipe(plumber())
-    .pipe(dependents())
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(postcss(processors))
-    .pipe(minifyCss())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'css'))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
+        since: gulp.lastRun('sass'),
+      })
+      .pipe(sourcemaps.init())
+      .pipe(plumber())
+      .pipe(dependents())
+      .pipe(sass())
+      .pipe(autoprefixer())
+      // .pipe(postcss(processors))
+      .pipe(minifyCss())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(dist_assets_folder + 'css'))
+      .pipe(browserSync.stream())
+  );
 });
 
 gulp.task('less', () => {

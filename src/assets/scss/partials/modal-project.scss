@@ -1,0 +1,35 @@
+@import '../helpers/helpers';
+
+.modal-project {
+  &__inner {
+    height: 90vh;
+  }
+
+  &__slides {
+    height: 100%;
+  }
+
+  &__slide-item {
+    height: 100%;
+  }
+
+  &__nav {
+    // review: not absolute
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  &__nav-btn {
+    text-transform: uppercase;
+
+    & + & {
+      margin-left: 100px;
+    }
+  }
+
+  &__nav-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
