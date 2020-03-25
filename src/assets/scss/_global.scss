@@ -26,9 +26,27 @@ a {
 
 body {
   @include font-main;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 img {
   display: block;
   height: auto;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.disabled {
+  display: none;
 }

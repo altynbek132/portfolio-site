@@ -5,7 +5,6 @@
   min-width: 160px;
   padding: 0.85em 1.7em;
   font-size: 16px;
-  font-weight: 700;
   color: $color-gray;
   text-align: center;
   text-transform: uppercase;
@@ -27,5 +26,17 @@
     color: $color-white;
     background-color: $color-black;
     box-shadow: 0 0 5px 2px #cfcfcf;
+  }
+
+  &--small {
+    $padding-top-and-bottom: 0.75em;
+
+    padding-top: $padding-top-and-bottom;
+    padding-bottom: $padding-top-and-bottom - 0.1em;
+    font-size: 14px;
+  }
+
+  &--gray-border {
+    border-color: $color-gray;
   }
 }

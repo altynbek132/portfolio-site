@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>portfolio</title>
     <link rel="stylesheet" href="./assets/css/pages/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
-  <body>
+  <body class="no-scroll">
     <section class="section-outer intro">
       <div class="container">
         <header class="intro__header header">
@@ -198,7 +203,7 @@
         </div>
 
         <div class="projects__btn-wrapper">
-          <button type="button" class="projects__btn btn btn--button">load more work</button>
+          <button type="button" class="btn btn--small">load more work</button>
         </div>
       </div>
     </section>
@@ -397,6 +402,199 @@
         </div>
       </div>
     </section>
+
+    <section class="section-outer modal modal-project disabled">
+      <div class="modal__inner modal-project__inner">
+        <button class="modal__btn-close">
+          <svg class="modal__btn-close-icon">
+            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+          </svg>
+        </button>
+
+        <div class="modal-project__slides slide">
+          <div class="modal-project__slide-item slide-item">
+            <div class="slide-item__photo-wrapper">
+              <img src="https://via.placeholder.com/500x999" alt="" class="slide-item__photo" />
+            </div>
+
+            <div class="slide-item__content-wrapper">
+              <div class="slide-item__content">
+                <div class="slide-item__title">project title</div>
+                <div class="slide-item__subtitle">
+                  <div class="slide-item__category">category</div>
+                  <div class="slide-item__date">1488</div>
+                </div>
+                <div class="slide-item__client-title">Client</div>
+                <div class="slide-item__client-name">Creative Agency</div>
+                <div class="slide-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                  enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                  ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet
+                  a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="modal-project__nav">
+          <button class="modal-project__nav-btn">
+            <svg class="modal-project__nav-icon">
+              <use xlink:href="./assets/images/sprite.svg#icons--back"></use>
+            </svg>
+            previous
+          </button>
+          <button class="modal-project__nav-btn">
+            next
+            <svg class="modal-project__nav-icon">
+              <use xlink:href="./assets/images/sprite.svg#icons--next"></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section-outer modal modal-resume">
+      <div class="modal__inner modal-resume__inner">
+        <button class="modal__btn-close">
+          <svg class="modal__btn-close-icon">
+            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+          </svg>
+        </button>
+
+        <div class="modal-resume__title">
+          resume
+        </div>
+        <div class="modal-resume__btns">
+          <a class="modal-resume__btn btn btn--small btn--gray-border" href="#">download pdf</a>
+          <button class="modal-resume__btn btn btn--small btn--gray-border">print</button>
+        </div>
+        <div class="modal-resume__content">
+          <div class="modal-resume__col modal-resume__col--left">
+            <div class="modal-resume__col-title">experience</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-resume__col-line modal-resume__col--right"></div>
+
+          <div class="modal-resume__col">
+            <div class="modal-resume__col-title">education</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2005 - 2010</div>
+              <div class="modal-resume__block-post">UI/UX Design</div>
+              <div class="modal-resume__block-place">LA University, USA</div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2005 - 2010</div>
+              <div class="modal-resume__block-post">UI/UX Design</div>
+              <div class="modal-resume__block-place">LA University, USA</div>
+            </div>
+
+            <div class="modal-resume__col-title modal-resume__col-title--block">skills</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__skill-wrapper">
+                <div class="modal-resume__skills">
+                  <div class="modal-resume__skill-name">UI/UX Design</div>
+                  <div class="modal-resume__skill-name">Illustrator</div>
+                  <div class="modal-resume__skill-name">Photoshop</div>
+                  <div class="modal-resume__skill-name">Sketch</div>
+                </div>
+                <div class="modal-resume__skill-bars">
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-resume__col-title modal-resume__col-title--block">awards</div>
+            <div class="modal-resume__block modal-resume__block--award">
+              <div class="modal-resume__block-date">2016</div>
+              <div class="modal-resume__block-content">
+                <div class="modal-resume__block-prof">
+                  THE BEST APP INTERFACE
+                </div>
+                <div class="modal-resume__block-post">UI/UX Magazine</div>
+                <div class="modal-resume__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  blandit aliquam ligula ut condimentum.
+                </div>
+              </div>
+            </div>
+            <div class="modal-resume__block modal-resume__block--award">
+              <div class="modal-resume__block-date">2016</div>
+              <div class="modal-resume__block-content">
+                <div class="modal-resume__block-prof">
+                  THE BEST WEBSITE INTERFACE
+                </div>
+                <div class="modal-resume__block-post">UI/UX Magazine</div>
+                <div class="modal-resume__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  blandit aliquam ligula ut condimentum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="btn">hire me</a>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
     <script async src="./assets/js/all.js"></script>
   </body>

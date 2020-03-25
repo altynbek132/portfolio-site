@@ -1,0 +1,72 @@
+@import '../helpers/helpers';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+  background-color: rgba(21, 32, 90, 0.904);
+
+  &__inner {
+    position: relative;
+    margin: auto;
+    background-color: $color-white;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    transition: 0.2s;
+
+    &-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.modal-project {
+  // @include flex-center;
+
+  &__inner {
+    height: 90vh;
+  }
+
+  &__slides {
+    height: 100%;
+  }
+
+  &__slide-item {
+    height: 100%;
+  }
+
+  &__nav {
+    // review: not absolute
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  &__nav-btn {
+    text-transform: uppercase;
+
+    & + & {
+      margin-left: 100px;
+    }
+  }
+
+  &__nav-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
