@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>portfolio</title>
     <link rel="stylesheet" href="./assets/css/pages/index.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
   </head>
-  <body class="no-scroll">
+  <body>
     <section class="section-outer intro">
       <div class="container">
         <header class="intro__header header">
@@ -28,8 +23,10 @@
             <a class="nav__item active" href="#work">work</a>
             <a class="nav__item" href="#about">about me</a>
             <a class="nav__item" href="#blog">blog</a>
-            <a class="nav__item" href="#contact">contact</a>
-            <a class="nav__item nav__item--border" href="#hire">hire me</a>
+            <a class="nav__item" href="#contact" data-modal="modal_contact">contact</a>
+            <button class="nav__item nav__item--border" type="button" data-modal="modal_contact">
+              hire me
+            </button>
           </div>
         </header>
 
@@ -71,8 +68,8 @@
               </a>
             </div>
             <div class="intro__buttons">
-              <a href="#" class="btn">hire me</a>
-              <a href="#" class="btn">see my resume</a>
+              <button class="btn" type="button" data-modal="modal_contact">hire me</button>
+              <a href="#" class="btn" data-modal="modal_resume">see my resume</a>
             </div>
           </div>
           <div class="intro__photo-wrapper">
@@ -85,18 +82,18 @@
     <section id="work" class="section-outer projects">
       <div class="container">
         <div class="projects__nav nav-projects">
-          <a href="#" class="nav-projects__item">All</a>
-          <a href="#" class="nav-projects__item">App</a>
-          <a href="#" class="nav-projects__item">Website</a>
-          <a href="#" class="nav-projects__item">Interaction</a>
+          <a href="#" class="nav-projects__item" data-filter="all">All</a>
+          <a href="#" class="nav-projects__item" data-filter="app">App</a>
+          <a href="#" class="nav-projects__item" data-filter="website">Website</a>
+          <a href="#" class="nav-projects__item" data-filter="interaction">Interaction</a>
         </div>
 
-        <div class="projects__works works">
-          <div class="works__item-wrapper">
-            <div class="works__item">
+        <div id="works-container" class="projects__works works">
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/555x450" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">App</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -104,11 +101,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="website">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">Website</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -116,11 +113,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">App</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -128,11 +125,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="website">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">Website</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -140,11 +137,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">Interaction</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -152,11 +149,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">App</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -164,11 +161,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">Interaction</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -176,11 +173,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">Interaction</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -188,11 +185,11 @@
               </div>
             </div>
           </div>
-          <div class="works__item-wrapper">
-            <div class="works__item">
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
               <img src="https://via.placeholder.com/370x300" class="works__photo" />
               <div class="works__content">
-                <div class="works__category">category</div>
+                <div class="works__category">App</div>
                 <div class="works__title">
                   <div class="works__name">project title</div>
                   <div class="works__date">2019</div>
@@ -235,8 +232,8 @@
               </p>
             </div>
             <div class="about__buttons">
-              <a href="#" class="btn">hire me</a>
-              <a href="#" class="btn">see my resume</a>
+              <button class="btn" type="button" data-modal="modal_contact">hire me</button>
+              <a href="#" class="btn" data-modal="modal_resume">see my resume</a>
             </div>
           </div>
         </div>
@@ -302,7 +299,7 @@
             <a href="#" target="_blank" class="card-article__photo-wrapper">
               <img src="https://via.placeholder.com/370x260" alt="" class="card-article__photo" />
             </a>
-            <div class="card-article__title">website inspiration</div>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
             <div class="card-article__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
@@ -316,7 +313,7 @@
             <a href="#" target="_blank" class="card-article__photo-wrapper">
               <img src="https://via.placeholder.com/555x390" alt="" class="card-article__photo" />
             </a>
-            <div class="card-article__title">website inspiration</div>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
             <div class="card-article__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
@@ -332,7 +329,7 @@
             <a href="#" target="_blank" class="card-article__photo-wrapper">
               <img src="https://via.placeholder.com/370x260" alt="" class="card-article__photo" />
             </a>
-            <div class="card-article__title">website inspiration</div>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
             <div class="card-article__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
@@ -391,72 +388,74 @@
               <a class="nav__item nav__item--footer active" href="#work">work</a>
               <a class="nav__item nav__item--footer" href="#about">about me</a>
               <a class="nav__item nav__item--footer" href="#blog">blog</a>
-              <a class="nav__item nav__item--footer" href="#contact">contact</a>
-              <a
-                class="nav__item nav__item--footer nav__item--border nav__item--footer-border"
-                href="#hire"
-                >hire me</a
+              <a class="nav__item nav__item--footer" data-modal="modal_contact" href="#contact"
+                >contact</a
               >
+              <button
+                class="nav__item nav__item--footer nav__item--border nav__item--footer-border"
+                type="button"
+                data-modal="modal_contact"
+              >
+                hire me
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-outer modal modal-project" style="display: none;">
+    <section class="section-outer modal modal-project" id="modal_project">
       <div class="modal__inner modal-project__inner">
-        <button class="modal__btn-close">
+        <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
             <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
           </svg>
         </button>
 
-        <div class="modal-project__slides slide">
-          <div class="modal-project__slide-item slide-item">
-            <div class="slide-item__photo-wrapper">
-              <img src="https://via.placeholder.com/500x999" alt="" class="slide-item__photo" />
-            </div>
-
-            <div class="slide-item__content-wrapper">
-              <div class="slide-item__content">
-                <div class="slide-item__title">project title</div>
-                <div class="slide-item__subtitle">
-                  <div class="slide-item__category">category</div>
-                  <div class="slide-item__date">1488</div>
-                </div>
-                <div class="slide-item__client-title">Client</div>
-                <div class="slide-item__client-name">Creative Agency</div>
-                <div class="slide-item__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
-                  enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
-                  ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet
-                  a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="slide-item__photo-wrapper">
+          <img src="https://via.placeholder.com/500x999" alt="" class="slide-item__photo" />
         </div>
 
-        <nav class="modal-project__nav">
-          <button class="modal-project__nav-btn">
-            <svg class="modal-project__nav-icon">
-              <use xlink:href="./assets/images/sprite.svg#icons--back"></use>
-            </svg>
-            previous
-          </button>
-          <button class="modal-project__nav-btn">
-            next
-            <svg class="modal-project__nav-icon">
-              <use xlink:href="./assets/images/sprite.svg#icons--next"></use>
-            </svg>
-          </button>
-        </nav>
+        <div class="slide-item__content-wrapper">
+          <div class="slide-item__content">
+            <div class="slide-item__title">project title</div>
+            <div class="slide-item__subtitle">
+              <div class="slide-item__category">category</div>
+              <div class="slide-item__date">1488</div>
+            </div>
+            <div class="slide-item__client-title">Client</div>
+            <div class="slide-item__client-name">Creative Agency</div>
+            <div class="slide-item__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+            </div>
+          </div>
+
+          <nav class="modal-project__nav">
+            <button class="modal-project__nav-btn">
+              <svg class="modal-project__nav-icon">
+                <use xlink:href="./assets/images/sprite.svg#icons--back"></use>
+              </svg>
+              previous
+            </button>
+            <button class="modal-project__nav-btn">
+              next
+              <svg class="modal-project__nav-icon">
+                <use xlink:href="./assets/images/sprite.svg#icons--next"></use>
+              </svg>
+            </button>
+          </nav>
+        </div>
+        <div class="modal-project__slide-item slide-item"></div>
+        <div class="modal-project__slides slide"></div>
       </div>
     </section>
 
-    <section class="section-outer modal modal-resume" style="display: none;">
+    <section class="section-outer modal modal-resume" id="modal_resume">
       <div class="modal__inner modal-resume__inner">
-        <button class="modal__btn-close">
+        <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
             <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
           </svg>
@@ -581,14 +580,14 @@
           </div>
         </div>
         <div class="text-center">
-          <a href="#" class="btn">hire me</a>
+          <button class="btn" type="button" data-modal="modal_contact">hire me</button>
         </div>
       </div>
     </section>
 
-    <section class="section-outer modal modal-contact">
+    <section class="section-outer modal modal-contact" id="modal_contact">
       <div class="modal__inner modal-contact__inner">
-        <button class="modal__btn-close">
+        <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
             <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
           </svg>
@@ -644,6 +643,8 @@
         </div>
       </div>
     </section>
+
+    <div id="modal-bg" class="modal-bg"></div>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

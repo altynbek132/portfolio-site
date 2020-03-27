@@ -14,18 +14,15 @@
   }
 
   &__nav {
-    // review: not absolute
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 22px;
   }
 
   &__nav-btn {
     text-transform: uppercase;
-
-    & + & {
-      margin-left: 100px;
-    }
   }
 
   &__nav-icon {

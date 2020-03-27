@@ -40,6 +40,10 @@
     font-weight: bold;
     color: $color-black;
     text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__subtitle {

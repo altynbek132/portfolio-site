@@ -4,12 +4,13 @@
   margin: 0 -15px;
 
   &__item-wrapper {
-    flex: 1 1 33.333%;
+    flex: 0 1 33.333%;
     padding: 0 15px 30px;
   }
 
   &__item {
     overflow: hidden;
+    cursor: pointer;
     border-radius: 9px;
     box-shadow: 0 0 5px 2px #e5e5e5;
     transition: 0.2s;
