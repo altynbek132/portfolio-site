@@ -10,6 +10,10 @@
   pointer-events: none;
   transition: 0.3s;
 
+  @media (max-width: $xs) {
+    padding: 5px;
+  }
+
   &.active {
     background-color: rgba(21, 32, 90, 0.904);
   }

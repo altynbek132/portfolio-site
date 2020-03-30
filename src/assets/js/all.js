@@ -83,13 +83,13 @@ const filterCategories = () => {
 const slick = () => {
   const params = {
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2754,
     arrows: false,
     waitForAnimate: false,
     adaptiveHeight: true,
     speed: 228,
-    fade: true,
+    // fade: true,
     dots: true,
     // variableWidth: true,
   };

@@ -20,13 +20,13 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: $xs) {
+      flex-direction: column-reverse;
+    }
+
     @media (max-width: $m) {
       flex-basis: 100%;
       justify-content: space-evenly;
-    }
-
-    @media (max-width: $xs) {
-      flex-direction: column;
     }
   }
 
@@ -52,8 +52,11 @@
       padding: 5px 0;
       margin: 0;
       border-right: none;
-      border-bottom: 1px solid #413f41;
     }
+  }
+
+  &__social {
+    border-bottom: 1px solid #413f41;
   }
 }
 

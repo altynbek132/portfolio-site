@@ -6,6 +6,14 @@
     justify-content: center;
     padding: 0 15px;
     margin-bottom: 75px;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $m) {
+      margin-bottom: 45px;
+    }
   }
 
   &__inner {
@@ -20,6 +28,10 @@
     color: $color-black;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: $m) {
+      margin-bottom: 25px;
+    }
   }
 
   &__block {
@@ -79,12 +91,21 @@
   &__btns {
     margin-bottom: 65px;
     text-align: center;
+
+    @media (max-width: $m) {
+      margin-bottom: 45px;
+    }
   }
 
   &__col {
     display: flex;
     flex: 0 1 337px;
     flex-direction: column;
+
+    @media (max-width: $xs) {
+      margin-top: 0;
+      text-align: left !important;
+    }
 
     &--left {
       text-align: right;
@@ -98,6 +119,12 @@
     color: $color-black;
     text-transform: uppercase;
 
+    @media (max-width: $xs) {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
     &--block {
       margin-top: 35px;
       margin-bottom: 25px;
@@ -106,7 +133,15 @@
 
   &__col-line {
     margin: 0 47.5px;
-    border-right: 2px solid $color-gray;
+    border-right: 1px solid $color-gray;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+
+    @media (max-width: $m) {
+      margin: 0 15px;
+    }
   }
 
   $skill-margin-value: 15;
@@ -159,5 +194,9 @@
   &__skill-wrapper {
     display: flex;
     width: 82%;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
   }
 }
