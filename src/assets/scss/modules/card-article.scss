@@ -12,7 +12,7 @@
     position: absolute;
     z-index: 2;
     padding: 3%;
-    font-size: 14px;
+    font-size: 15px;
     color: $color-white;
     text-align: center;
     pointer-events: none;
@@ -62,7 +62,7 @@
 
   &__subtitle {
     margin-bottom: 30px;
-    font-size: 12px;
+    font-size: 16px;
     color: $color-black;
     text-transform: uppercase;
 
@@ -74,7 +74,7 @@
   &__text {
     flex: 1 1 auto;
     margin-bottom: 40px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 2;
     color: $color-profile-org;
 
