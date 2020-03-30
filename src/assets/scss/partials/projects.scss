@@ -11,6 +11,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @media (max-width: $xs) {
+      justify-content: center;
+    }
   }
 
   &__btn-wrapper {

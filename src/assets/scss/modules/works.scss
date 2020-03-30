@@ -7,12 +7,12 @@
     flex: 0 1 33.333%;
     padding: 0 15px 30px;
 
-    @media (max-width: $xs) {
-      flex-basis: 90%;
-    }
-
     @media (max-width: $m) {
       flex-basis: 50%;
+    }
+
+    @media (max-width: $xs) {
+      flex-basis: 100%;
     }
   }
 
@@ -40,6 +40,10 @@
 
   &__content {
     margin: 18px 20px 15px 12px;
+
+    @media (max-width: $xs) {
+      margin: 10px 15px;
+    }
   }
 
   &__category {

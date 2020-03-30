@@ -3,6 +3,11 @@
 .social {
   display: flex;
 
+  @media (max-width: $xs) {
+    align-self: stretch;
+    justify-content: space-around;
+  }
+
   &__icon {
     height: 22px;
     color: white;
