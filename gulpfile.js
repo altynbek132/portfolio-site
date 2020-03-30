@@ -75,6 +75,10 @@ gulp.task('svgClean', function() {
     .pipe(gulp.dest(src_assets_folder + 'images/svg-clean'));
 });
 
+gulp.task('svgIcoStream', function() {
+  return gulp.src([dist_assets_folder + 'images/icons/*.svg']).pipe(browserSync.stream());
+});
+
 gulp.task('svgMin', function() {
   return gulp
     .src([src_assets_folder + 'images/svg-clean/*.svg'])
@@ -125,6 +129,17 @@ gulp.task('pug', () => {
 });
 
 gulp.task('sass', () => {
+  return gulp
+    .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
+      since: gulp.lastRun('sass'),
+    })
+    .pipe(dependents())
+    .pipe(sass())
+    .pipe(gulp.dest(dist_assets_folder + 'css'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('sassBuild', () => {
   var propList = [
     'font',
     'font-size',
@@ -149,22 +164,14 @@ gulp.task('sass', () => {
     }),
   ];
 
-  return (
-    gulp
-      .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
-        since: gulp.lastRun('sass'),
-      })
-      // .pipe(sourcemaps.init())
-      // .pipe(plumber())
-      .pipe(dependents())
-      .pipe(sass())
-      // .pipe(autoprefixer())
-      // .pipe(postcss(processors))
-      // .pipe(minifyCss())
-      // .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(dist_assets_folder + 'css'))
-      .pipe(browserSync.stream())
-  );
+  return gulp
+    .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'])
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(postcss(processors))
+    .pipe(minifyCss())
+    .pipe(gulp.dest(dist_assets_folder + 'css'));
 });
 
 gulp.task('less', () => {
@@ -196,23 +203,38 @@ gulp.task('stylus', () => {
 gulp.task('js', () => {
   return gulp
     .src([src_assets_folder + 'js/**/*.js'], { since: gulp.lastRun('js') })
-    // .pipe(plumber())
     .pipe(
       webpack({
         mode: 'development',
       }),
     )
-    // .pipe(sourcemaps.init())
     .pipe(
       babel({
         presets: ['@babel/env'],
       }),
     )
     .pipe(concat('all.js'))
-    // .pipe(uglify())
-    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'js'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('jsBuild', () => {
+  return gulp
+    .src([src_assets_folder + 'js/**/*.js'])
+    .pipe(plumber())
+    .pipe(
+      webpack({
+        mode: 'production',
+      }),
+    )
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      }),
+    )
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(dist_assets_folder + 'js'));
 });
 
 gulp.task('images', () => {
@@ -258,6 +280,23 @@ gulp.task(
     'js',
     'images',
     'vendor',
+    'svgMin',
+    'svgIcoStream',
+  ),
+);
+
+gulp.task(
+  'buildProd',
+  gulp.series(
+    'clear',
+    'svgSprite',
+    'html',
+    'sassBuild',
+    // 'less',
+    // 'stylus',
+    'jsBuild',
+    'images',
+    // 'vendor',
     'svgMin',
   ),
 );
