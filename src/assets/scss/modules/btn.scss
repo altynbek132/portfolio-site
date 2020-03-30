@@ -14,12 +14,28 @@
   border-radius: 2em;
   transition: 0.2s;
 
+  @media (max-width: $xs) {
+    font-size: 13px;
+  }
+
+  @media (max-width: $s) {
+    padding: 0.65em 1.7em;
+  }
+
   &:focus {
     outline: none;
   }
 
   & + & {
     margin-left: 15px;
+
+    @media (max-width: $xs) {
+      margin: 10px 0 0;
+    }
+
+    @media (max-width: $s) {
+      margin: 0;
+    }
   }
 
   &:hover {

@@ -19,6 +19,10 @@
   &__photo-wrapper {
     position: relative;
     flex: 0 0 52%;
+
+    @media (max-width: $m) {
+      flex-basis: 40%;
+    }
   }
 
   &__photo {

@@ -10,11 +10,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $m) {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__col {
     display: flex;
     align-items: center;
+
+    @media (max-width: $m) {
+      flex-basis: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__nav {
+    @media (max-width: $m) {
+      flex-basis: 100%;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+    }
   }
 
   &__copyright {

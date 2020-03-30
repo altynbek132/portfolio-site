@@ -7,6 +7,10 @@
     font-size: 16px;
     font-weight: bold;
     color: $color-black;
+
+    @media (max-width: $m) {
+      font-size: 13px;
+    }
   }
 
   &__content {
@@ -18,8 +22,13 @@
 
   &__photo {
     width: 59px;
-    height: auto;
+    height: 59px;
     border-radius: 50%;
+
+    @media (max-width: $m) {
+      width: 45px;
+      height: 45px;
+    }
   }
 
   &__prof {

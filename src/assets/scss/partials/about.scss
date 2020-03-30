@@ -3,9 +3,26 @@
 .about {
   margin: 130px 0 142px 0;
 
+  @media (max-width: $m) {
+    margin: 80px 0;
+  }
+
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__buttons {
+    @media (max-width: $s) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: $s) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   &__photo-wrapper {
@@ -13,6 +30,17 @@
     flex-basis: 45%;
     flex-shrink: 1;
     align-self: flex-end;
+
+    @media (max-width: $m) {
+      flex-basis: 35%;
+    }
+
+    @media (max-width: $s) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+    }
 
     &::before {
       position: absolute;
@@ -39,6 +67,15 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
+
+    @media (max-width: $m) {
+      flex-basis: 65%;
+    }
+
+    @media (max-width: $s) {
+      flex-basis: 100%;
+      padding: 0 10px;
+    }
   }
 
   &__title {
@@ -55,6 +92,10 @@
     font-weight: bold;
     color: #dedede;
     text-transform: uppercase;
+
+    @media (max-width: $l) {
+      font-size: 62px;
+    }
   }
 
   &__text {
@@ -63,5 +104,13 @@
     font-size: 12px;
     line-height: 2;
     color: $color-profile-org;
+
+    @media (max-width: $m) {
+      width: 100%;
+    }
+
+    @media (max-width: $s) {
+      margin-bottom: 45px;
+    }
   }
 }

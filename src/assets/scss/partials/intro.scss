@@ -4,17 +4,17 @@
   height: 100vh;
   padding-top: 15px;
 
-  .container {
+  & > .container {
     display: flex;
-    flex-direction: column;
     height: 100%;
     border-bottom: 1px $color-intro-border solid;
   }
 
   &__body {
     display: flex;
-    flex: 1 1 auto;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 80px;
   }
 
   &__content {
@@ -46,6 +46,10 @@
 
   &__photo-wrapper {
     align-self: flex-end;
+
+    @media (max-width: $m) {
+      flex: 0 1 400px;
+    }
   }
 
   &__photo {
@@ -54,14 +58,29 @@
     background-size: contain;
   }
 
-  // mix
   &__social {
     margin-bottom: 40px;
   }
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+
+    @media (max-width: 767px) {
+    }
+  }
+
+  &__buttons {
+    @media (max-width: $m) {
+      display: flex;
+      flex-direction: column;
+
+      .btn + .btn {
+        margin: 15px 0 0 0;
+      }
+    }
+  }
 }

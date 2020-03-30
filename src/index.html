@@ -9,61 +9,76 @@
   </head>
   <body>
     <section class="section-outer intro">
-      <div class="container">
-        <header class="intro__header header">
-          <div class="header__avatar avatar">
-            <img src="https://via.placeholder.com/100" class="avatar__photo" />
-            <div class="avatar__content">
-              <div class="avatar__name">Lewis <br />Nathaniel</div>
-              <div class="avatar__prof">UI & UX Designer</div>
+      <header class="intro__header header">
+        <div class="container section-outer">
+          <div class="header__body">
+            <div class="header__avatar avatar">
+              <img src="./assets/images/avatar.png" class="avatar__photo" />
+              <div class="avatar__content">
+                <div class="avatar__name">Altynbek <br />Aidarbekov</div>
+                <div class="avatar__prof">Layout Designer</div>
+              </div>
+            </div>
+
+            <div class="header__burger"><span></span></div>
+
+            <div class="header__nav nav">
+              <a class="nav__item active" href="#work">work</a>
+              <a class="nav__item" href="#about">about me</a>
+              <a class="nav__item" href="#blog">blog</a>
+              <a class="nav__item" href="#contact" data-modal="modal_contact">contact</a>
+              <button class="nav__item nav__item--border" type="button" data-modal="modal_contact">
+                hire me
+              </button>
             </div>
           </div>
+        </div>
+      </header>
 
-          <div class="header__nav nav">
-            <a class="nav__item active" href="#work">work</a>
-            <a class="nav__item" href="#about">about me</a>
-            <a class="nav__item" href="#blog">blog</a>
-            <a class="nav__item" href="#contact" data-modal="modal_contact">contact</a>
-            <button class="nav__item nav__item--border" type="button" data-modal="modal_contact">
-              hire me
-            </button>
-          </div>
-        </header>
-
+      <div class="container">
         <div class="intro__body">
           <div class="intro__content">
             <div class="intro__hi">Hello, I’m</div>
-            <div class="intro__name">Lewis Nathaniel</div>
+            <div class="intro__name">Altynbek</div>
             <div class="intro__prof">UI & UX Designer</div>
             <div class="intro__social social">
-              <a href="#" target="_blank" class="social__link social__link--1"
-                ><svg class="social__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--dribble"></use>
-                </svg>
+              <!-- <a href="#" target="_blank" class="social__link social__link--1"></a>
+                <object
+                  class="social__icon social__icon-svg"
+                  type="image/svg+xml"
+                  data="assets/images/icons/dribble.svg"
+                ></object>
               </a>
+              <a href="#" target="_blank" class="social__link social__link--1">
+                <object
+                  class="social__icon social__icon-svg"
+                  type="image/svg+xml"
+                  data="assets/images/icons/dribble.svg"
+                ></object>
+              </a> -->
               <a href="#" target="_blank" class="social__link social__link--2"
                 ><svg class="social__icon social__icon--behance">
-                  <use xlink:href="./assets/images/sprite.svg#icons--behance"></use>
+                  <use xlink:href="./assets/images/sprite.svg#behance"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--3"
                 ><svg class="social__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--linkedin"></use>
+                  <use xlink:href="./assets/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--4"
                 ><svg class="social__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--facebook"></use>
+                  <use xlink:href="./assets/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--5"
                 ><svg class="social__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--instagram"></use>
+                  <use xlink:href="./assets/images/sprite.svg#instagram"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--6"
                 ><svg class="social__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--twitter"></use>
+                  <use xlink:href="./assets/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </div>
@@ -91,7 +106,10 @@
         <div id="works-container" class="projects__works works">
           <div class="works__item-wrapper" data-category="app">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/555x450" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-1.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">App</div>
                 <div class="works__title">
@@ -103,7 +121,10 @@
           </div>
           <div class="works__item-wrapper" data-category="website">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-2.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">Website</div>
                 <div class="works__title">
@@ -115,7 +136,10 @@
           </div>
           <div class="works__item-wrapper" data-category="app">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-3.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">App</div>
                 <div class="works__title">
@@ -127,7 +151,10 @@
           </div>
           <div class="works__item-wrapper" data-category="website">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-4.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">Website</div>
                 <div class="works__title">
@@ -139,7 +166,10 @@
           </div>
           <div class="works__item-wrapper" data-category="interaction">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-5.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">Interaction</div>
                 <div class="works__title">
@@ -151,7 +181,10 @@
           </div>
           <div class="works__item-wrapper" data-category="app">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-1.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">App</div>
                 <div class="works__title">
@@ -163,7 +196,10 @@
           </div>
           <div class="works__item-wrapper" data-category="interaction">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-2.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">Interaction</div>
                 <div class="works__title">
@@ -175,7 +211,10 @@
           </div>
           <div class="works__item-wrapper" data-category="interaction">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-3.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">Interaction</div>
                 <div class="works__title">
@@ -187,7 +226,10 @@
           </div>
           <div class="works__item-wrapper" data-category="app">
             <div class="works__item" data-modal="modal_project">
-              <img src="https://via.placeholder.com/370x300" class="works__photo" />
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-4.jpg" class="works__photo" />
+              </div>
+
               <div class="works__content">
                 <div class="works__category">App</div>
                 <div class="works__title">
@@ -240,9 +282,124 @@
       </div>
     </section>
 
-    <section class="section-outer reviews">
-      <div class="container">
-        <div class="reviews__item review">
+    <section class="reviews">
+      <div class="slider-reviews">
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
+          <div class="review__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+            </p>
+          </div>
+          <div class="review__profile profile">
+            <div class="profile__photo-wrapper">
+              <img src="./assets/images/avatar.png" class="profile__photo" />
+            </div>
+            <div class="profile__name">Noname #1</div>
+            <div class="profile__organization">Marketing House</div>
+            <div class="profile__rating star-rating">
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item star-rating__item--half">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
+          <div class="review__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.
+            </p>
+          </div>
+          <div class="review__profile profile">
+            <div class="profile__photo-wrapper">
+              <img src="./assets/images/avatar.png" class="profile__photo" />
+            </div>
+            <div class="profile__name">Noname #2</div>
+            <div class="profile__organization">Marketing House</div>
+            <div class="profile__rating star-rating">
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="star-rating__item star-rating__item--half">
+                <svg class="star-rating__icon">
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
           <div class="review__text">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
@@ -253,39 +410,41 @@
           </div>
           <div class="review__profile profile">
             <div class="profile__photo-wrapper">
-              <img src="https://via.placeholder.com/180" class="profile__photo" />
+              <img src="./assets/images/avatar.png" class="profile__photo" />
             </div>
-            <div class="profile__name">Edward M. Brooks</div>
+            <div class="profile__name">Noname #3</div>
             <div class="profile__organization">Marketing House</div>
             <div class="profile__rating star-rating">
               <div class="star-rating__item">
                 <svg class="star-rating__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--star"></use>
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
                 </svg>
               </div>
               <div class="star-rating__item">
                 <svg class="star-rating__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--star"></use>
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
                 </svg>
               </div>
               <div class="star-rating__item">
                 <svg class="star-rating__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--star"></use>
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
                 </svg>
               </div>
               <div class="star-rating__item">
                 <svg class="star-rating__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--star"></use>
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
                 </svg>
               </div>
               <div class="star-rating__item star-rating__item--half">
                 <svg class="star-rating__icon">
-                  <use xlink:href="./assets/images/sprite.svg#icons--star"></use>
+                  <use xlink:href="./assets/images/sprite.svg#star"></use>
                 </svg>
               </div>
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
     </section>
 
@@ -297,7 +456,11 @@
           <div class="articles__item card-article">
             <time class="card-article__date">15<br />june</time>
             <a href="#" target="_blank" class="card-article__photo-wrapper">
-              <img src="https://via.placeholder.com/370x260" alt="" class="card-article__photo" />
+              <img
+                src="./assets/images/articles/article-1.jpg"
+                alt=""
+                class="card-article__photo"
+              />
             </a>
             <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
@@ -311,7 +474,11 @@
           <div class="articles__item card-article">
             <time class="card-article__date">15<br />june</time>
             <a href="#" target="_blank" class="card-article__photo-wrapper">
-              <img src="https://via.placeholder.com/555x390" alt="" class="card-article__photo" />
+              <img
+                src="./assets/images/articles/article-2.jpg"
+                alt=""
+                class="card-article__photo"
+              />
             </a>
             <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
@@ -327,7 +494,11 @@
           <div class="articles__item card-article">
             <time class="card-article__date">15<br />june</time>
             <a href="#" target="_blank" class="card-article__photo-wrapper">
-              <img src="https://via.placeholder.com/370x260" alt="" class="card-article__photo" />
+              <img
+                src="./assets/images/articles/article-3.jpg"
+                alt=""
+                class="card-article__photo"
+              />
             </a>
             <a class="card-article__title" href="#" target="_blank">website inspiration</a>
             <div class="card-article__subtitle">category</div>
@@ -353,32 +524,32 @@
             <div class="footer__social social">
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer">
-                  <use xlink:href="./assets/images/sprite.svg#icons--dribble"></use>
+                  <use xlink:href="./assets/images/sprite.svg#dribble"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer social__icon--footer-behance">
-                  <use xlink:href="./assets/images/sprite.svg#icons--behance"></use>
+                  <use xlink:href="./assets/images/sprite.svg#behance"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer">
-                  <use xlink:href="./assets/images/sprite.svg#icons--linkedin"></use>
+                  <use xlink:href="./assets/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer">
-                  <use xlink:href="./assets/images/sprite.svg#icons--facebook"></use>
+                  <use xlink:href="./assets/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer">
-                  <use xlink:href="./assets/images/sprite.svg#icons--instagram"></use>
+                  <use xlink:href="./assets/images/sprite.svg#instagram"></use>
                 </svg>
               </a>
               <a href="#" target="_blank" class="social__link social__link--footer"
                 ><svg class="social__icon social__icon--footer">
-                  <use xlink:href="./assets/images/sprite.svg#icons--twitter"></use>
+                  <use xlink:href="./assets/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </div>
@@ -408,24 +579,51 @@
       <div class="modal__inner modal-project__inner">
         <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
-            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+            <use xlink:href="./assets/images/sprite.svg#cancel"></use>
           </svg>
         </button>
 
-        <div class="slide-item__photo-wrapper">
-          <img src="https://via.placeholder.com/500x999" alt="" class="slide-item__photo" />
+        <div class="modal-project__slider slider">
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-1.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-2.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-3.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-4.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
         </div>
 
-        <div class="slide-item__content-wrapper">
-          <div class="slide-item__content">
-            <div class="slide-item__title">project title</div>
-            <div class="slide-item__subtitle">
-              <div class="slide-item__category">category</div>
-              <div class="slide-item__date">1488</div>
+        <div class="modal-project__content-wrapper">
+          <div class="modal-project__content">
+            <div class="modal-project__title">project title</div>
+            <div class="modal-project__subtitle">
+              <div class="modal-project__category">category</div>
+              <div class="modal-project__date">1488</div>
             </div>
-            <div class="slide-item__client-title">Client</div>
-            <div class="slide-item__client-name">Creative Agency</div>
-            <div class="slide-item__text">
+            <div class="modal-project__client-title">Client</div>
+            <div class="modal-project__client-name">Creative Agency</div>
+            <div class="modal-project__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
               eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
               iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
@@ -433,22 +631,22 @@
             </div>
           </div>
 
-          <nav class="modal-project__nav">
-            <button class="modal-project__nav-btn">
+          <nav class="modal-project__nav slider-nav">
+            <button class="modal-project__nav-btn slider-prev">
               <svg class="modal-project__nav-icon">
-                <use xlink:href="./assets/images/sprite.svg#icons--back"></use>
+                <use xlink:href="./assets/images/sprite.svg#back-black"></use>
               </svg>
               previous
             </button>
-            <button class="modal-project__nav-btn">
+            <button class="modal-project__nav-btn slider-next">
               next
               <svg class="modal-project__nav-icon">
-                <use xlink:href="./assets/images/sprite.svg#icons--next"></use>
+                <use xlink:href="./assets/images/sprite.svg#next-black"></use>
               </svg>
             </button>
           </nav>
         </div>
-        <div class="modal-project__slide-item slide-item"></div>
+        <div class="modal-project__modal-project modal-project"></div>
         <div class="modal-project__slides slide"></div>
       </div>
     </section>
@@ -457,7 +655,7 @@
       <div class="modal__inner modal-resume__inner">
         <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
-            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+            <use xlink:href="./assets/images/sprite.svg#cancel"></use>
           </svg>
         </button>
 
@@ -589,7 +787,7 @@
       <div class="modal__inner modal-contact__inner">
         <button class="modal__btn-close" data-close>
           <svg class="modal__btn-close-icon">
-            <use xlink:href="./assets/images/sprite.svg#icons--cancel"></use>
+            <use xlink:href="./assets/images/sprite.svg#cancel"></use>
           </svg>
         </button>
         <div class="modal-contact__content">
@@ -597,7 +795,7 @@
           <div class="modal-contact__subtitle">call me or send me a request</div>
           <a class="modal__btn-contact" href="tel:1488-228-54-27">
             <svg class="modal__btn-contact-icon">
-              <use xlink:href="./assets/images/sprite.svg#icons--phone"></use>
+              <use xlink:href="./assets/images/sprite.svg#phone"></use>
             </svg>
             <span class="modal__btn-contact-address">
               1488-228-54-27
@@ -605,7 +803,7 @@
           </a>
           <a class="modal__btn-contact" href="mailto:maslo.maslo@maslo.maslo">
             <svg class="modal__btn-contact-icon">
-              <use xlink:href="./assets/images/sprite.svg#icons--mail"></use>
+              <use xlink:href="./assets/images/sprite.svg#mail"></use>
             </svg>
             <span class="modal__btn-contact-address">
               maslo.maslo@maslo.maslo
@@ -639,7 +837,7 @@
         </div>
 
         <div class="modal-contact__photo-wrapper">
-          <img src="https://via.placeholder.com/1000x800" alt="" class="modal-contact__photo" />
+          <img src="./assets/images/contact.jpg" alt="" class="modal-contact__photo" />
         </div>
       </div>
     </section>

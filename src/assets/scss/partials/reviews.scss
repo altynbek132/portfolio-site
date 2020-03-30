@@ -5,8 +5,12 @@
     margin-bottom: 160px;
     background: $review-color url('../../images/reviews-bg.png') center no-repeat;
 
-    &:last-child {
-      margin-bottom: 210px;
+    &:not(:first-child) {
+      display: none;
     }
+  }
+
+  .slider-reviews.slick-initialized &__item {
+    display: block;
   }
 }

@@ -4,18 +4,31 @@
   margin-bottom: 125px;
   text-align: center;
 
+  @media (max-width: $m) {
+    margin-bottom: 85px;
+  }
+
   &__title {
     margin-bottom: 20px;
     font-size: 45px;
     font-weight: bold;
     color: $color-black;
     text-transform: uppercase;
+
+    @media (max-width: $m) {
+      margin-bottom: 10px;
+      font-size: 35px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 60px;
     font-size: 18px;
     color: $color-profile-org;
+
+    @media (max-width: $m) {
+      margin-bottom: 30px;
+    }
   }
 
   &__cards {
@@ -26,8 +39,16 @@
   }
 
   &__item {
-    flex: 1 1 33.333%;
+    flex: 0 1 33.333%;
     padding: 0 15px 30px;
+
+    @media (max-width: $m) {
+      flex-basis: 50%;
+    }
+
+    @media (max-width: $m) {
+      padding: 0 8px 30px;
+    }
   }
 
   &__link-wrapper {

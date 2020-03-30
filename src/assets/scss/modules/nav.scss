@@ -14,7 +14,7 @@
     &--border {
       padding: 8px 30px;
       border: 2px solid $color-black;
-      border-radius: 20px;
+      border-radius: 100px;
       transition: 0.2s;
 
       &:hover {
@@ -39,7 +39,26 @@
     }
 
     & + & {
+      @media (max-width: $m) {
+        margin-left: 23px;
+      }
+
       margin-left: 40px;
+    }
+  }
+
+  @media (max-width: $s) {
+    .header__nav > &__item {
+      padding: 15px 30px;
+      margin: 20px 0;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: $s) {
+    .header__nav > &__item {
+      padding: 10px 20px;
+      margin: 0;
     }
   }
 }

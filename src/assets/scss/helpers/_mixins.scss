@@ -7,3 +7,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin element-color($color) {
+  // background-image: url('data:./../../images/sprite.svg#icons--back;utf8,<svg ...><g stroke="#{$color}" ... /></g></svg>');
+  background-image: url('data:../../../../images/sprite.svg#icons--back');
+}
+
+@mixin center-abs {
+  top: 50%;
+  transform: translateY(-50%);
+}

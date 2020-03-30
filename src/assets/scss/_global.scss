@@ -2,6 +2,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+::selection {
+  background: lightblue;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200i,300,400,400i,700&display=swap');
@@ -50,3 +58,22 @@ button {
 .disabled {
   display: none;
 }
+
+p + p {
+  margin-top: 15px;
+}
+
+// font sizes
+// html {
+//   @media (max-width: $l) {
+//   }
+
+//   @media (max-width: $m) {
+//   }
+
+//   @media (max-width: $s) {
+//   }
+
+//   @media (max-width: $xs) {
+//   }
+// }
