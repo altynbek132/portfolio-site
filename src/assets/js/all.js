@@ -80,6 +80,38 @@ const filterCategories = () => {
   });
 };
 
+function isElementInViewport(el) {
+  var width = el.offsetWidth;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    left += el.offsetLeft;
+  }
+
+  return (
+    left >= window.pageXOffset &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
+}
+
+const scrolling = () => {
+  const paddingTop = $('.intro__header').height();
+  const handler = function(e) {
+    e.preventDefault();
+    const id = $(this).attr('href');
+    console.log(id);
+    document.body.classList.remove('no-scroll');
+    const blockOffset = $(id).offset().top - paddingTop - 30;
+    $('html, body').animate(
+      {
+        scrollTop: blockOffset,
+      },
+      200,
+    );
+  };
+  $('[data-scroll]').click(handler);
+};
+
 const slick = () => {
   const params = {
     dots: true,
@@ -94,7 +126,13 @@ const slick = () => {
     // variableWidth: true,
   };
   $('.slider').slick(params);
-  $('.slider-reviews').slick({ ...params, dots: false, fade: false, arrows: true,  draggable: false });
+  $('.slider-reviews').slick({
+    ...params,
+    dots: false,
+    fade: false,
+    arrows: true,
+    draggable: false,
+  });
 
   const arrowNavs = [...document.querySelectorAll('.slider-nav')];
   arrowNavs.forEach((arrowNav) => {
@@ -143,13 +181,26 @@ const headerToggle = () => {
   navItem.click(handleClose);
 };
 
+
+// const slickPlayToggle = () => {
+// }
+
+// const scrollSubscribe = () => {
+//   // let past = new Date();
+//   $(window).on('scroll', () => {
+//     // let current = new Date();
+//     // if ()
+//     slickPlayToggle();
+//  });
+// }
+
 $(document).ready(function() {
   slick();
   filterCategories();
   modalToggle();
-  svganim();
+  scrolling();
+  // scrollSubscribe();
+  // svganim();
 
   headerToggle();
 });
-
-// todo: scroll
