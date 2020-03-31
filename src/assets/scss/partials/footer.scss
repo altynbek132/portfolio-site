@@ -27,6 +27,10 @@
     @media (max-width: $m) {
       flex-basis: 100%;
       justify-content: space-evenly;
+
+      &--social {
+        justify-content: center;
+      }
     }
   }
 
@@ -56,7 +60,9 @@
   }
 
   &__social {
-    border-bottom: 1px solid #413f41;
+    @media (max-width: $xs) {
+      border-bottom: 1px solid #413f41;
+    }
   }
 }
 
