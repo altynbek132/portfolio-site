@@ -83,15 +83,12 @@ const filterCategories = () => {
 function isElementInViewport(el) {
   var width = el.offsetWidth;
 
-  while(el.offsetParent) {
+  while (el.offsetParent) {
     el = el.offsetParent;
     left += el.offsetLeft;
   }
 
-  return (
-    left >= window.pageXOffset &&
-    (left + width) <= (window.pageXOffset + window.innerWidth)
-  );
+  return left >= window.pageXOffset && left + width <= window.pageXOffset + window.innerWidth;
 }
 
 const scrolling = () => {
@@ -181,25 +178,31 @@ const headerToggle = () => {
   navItem.click(handleClose);
 };
 
-
 // const slickPlayToggle = () => {
 // }
 
-// const scrollSubscribe = () => {
-//   // let past = new Date();
-//   $(window).on('scroll', () => {
-//     // let current = new Date();
-//     // if ()
-//     slickPlayToggle();
-//  });
-// }
+const header = $('.intro__header');
+
+const fixHeader = ()  => {
+  const scrollOffset = $(document).scrollTop();
+  console.log(scrollOffset);
+  if (scrollOffset === 0) header.removeClass('fixed');
+  if (scrollOffset > 0) header.addClass('fixed');
+};
+
+const scrollSubscribe = () => {
+  $(window).on('scroll', () => {
+    fixHeader();
+  });
+};
+
 
 $(document).ready(function() {
   slick();
   filterCategories();
   modalToggle();
   scrolling();
-  // scrollSubscribe();
+  scrollSubscribe();
   // svganim();
 
   headerToggle();
