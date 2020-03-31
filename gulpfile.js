@@ -281,7 +281,7 @@ gulp.task(
     'images',
     'vendor',
     'svgMin',
-    'svgIcoStream',
+    // 'svgIcoStream',
   ),
 );
 

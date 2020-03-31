@@ -96,15 +96,16 @@ const scrolling = () => {
   const handler = function(e) {
     e.preventDefault();
     const id = $(this).attr('href');
-    console.log(id);
     document.body.classList.remove('no-scroll');
     const blockOffset = $(id).offset().top - paddingTop - 30;
-    $('html, body').animate(
-      {
-        scrollTop: blockOffset,
-      },
-      200,
-    );
+    $('html, body')
+      .delay(300)
+      .animate(
+        {
+          scrollTop: blockOffset,
+        },
+        500,
+      );
   };
   $('[data-scroll]').click(handler);
 };
@@ -112,8 +113,8 @@ const scrolling = () => {
 const slick = () => {
   const params = {
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 2754,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     arrows: false,
     waitForAnimate: false,
     adaptiveHeight: true,
@@ -150,9 +151,7 @@ const svganim = () => {
   const socIcons = [...document.querySelectorAll('.social__icon-svg')];
   socIcons.forEach((icon) => {
     const svgDocument = icon.contentDocument;
-    console.log(svgDocument.innerHTML);
 
-    console.log({ svgDocument });
     // const svgElement = svgDocument.querySelector('svg');
     svgDocument.setAttribute('fill', 'pink');
   });
@@ -183,9 +182,8 @@ const headerToggle = () => {
 
 const header = $('.intro__header');
 
-const fixHeader = ()  => {
+const fixHeader = () => {
   const scrollOffset = $(document).scrollTop();
-  console.log(scrollOffset);
   if (scrollOffset === 0) header.removeClass('fixed');
   if (scrollOffset > 0) header.addClass('fixed');
 };
@@ -196,13 +194,13 @@ const scrollSubscribe = () => {
   });
 };
 
-
 $(document).ready(function() {
   slick();
   filterCategories();
   modalToggle();
   scrolling();
   scrollSubscribe();
+  fixHeader();
   // svganim();
 
   headerToggle();
