@@ -117,7 +117,7 @@ const slick = () => {
     // autoplaySpeed: 5000,
     arrows: false,
     waitForAnimate: false,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     speed: 228,
     // fade: true,
     dots: true,
