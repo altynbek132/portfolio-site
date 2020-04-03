@@ -1,2 +1,7 @@
-# Portfolio site
-html, scss, gulp, svg sprites (do not work offline)
+# Source code of portfolio site
+### Builded via:
+- gulp
+- scss
+- BEM
+
+view site: https://altynbek132.github.io/dists/portfolio/index.html
