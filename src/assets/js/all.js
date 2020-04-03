@@ -99,7 +99,7 @@ const scrolling = () => {
     document.body.classList.remove('no-scroll');
     const blockOffset = $(id).offset().top - paddingTop - 30;
     $('html, body')
-      .delay(300)
+      // .delay(300)
       .animate(
         {
           scrollTop: blockOffset,
