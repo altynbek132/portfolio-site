@@ -285,6 +285,30 @@ gulp.task(
   ),
 );
 
+gulp.task('imagesBuild', () => {
+  return gulp
+    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
+      since: gulp.lastRun('images'),
+    })
+    .pipe(plumber())
+    .pipe(
+      imagemin([
+        // do not work
+        // imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        // imagemin.svgo({
+        //     plugins: [
+        //         {removeViewBox: true},
+        //         {cleanupIDs: false}
+        //     ]
+        // })
+      ]),
+    )
+    .pipe(gulp.dest(dist_assets_folder + 'images'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task(
   'buildProd',
   gulp.series(
